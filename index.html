@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando conteúdo HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="myElement"></div>
+    <button onclick="document.getElementById('myElement').innerHTML = 'Conteúdo adicionado'">Adicionar Conteúdo</button>
+
+    <p id="myElement">Texto Original</p>
+    <button onclick="var elem = document.getElementById('myElement'); elem.className = 'novaClasse'; elem.style.color = 'red'; elem.innerText = 'Texto alterado';">Trocar Classe e Texto</button>
+
+    <form>
+        Valor 1: <input type="number" id="valor1"><br>
+        Valor 2: <input type="number" id="valor2"><br>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+
+    <button onclick="var novo = document.createElement('div'); novo.innerHTML = 'ola eu sou cassiano'; document.body.appendChild(novo);">Adicionar Elemento</button>
+
+    <p id="location">Localização não capturada</p>
+    <button onclick="navigator.geolocation.getCurrentPosition(function(pos) { document.getElementById('location').innerText = pos.coords.latitude + ', ' + pos.coords.longitude; });">Capturar Localização</button>
+    <script src="./script.js"></script>
+
+
+</body>
+</html>
